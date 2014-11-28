@@ -3,6 +3,8 @@ docpadConfig =
     site:
       url: "http://johnbatte.me"
 
+      basePath: "/"
+
       oldUrls: [
         'jbatte47.github.io'
       ]
