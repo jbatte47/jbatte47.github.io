@@ -1,47 +1,30 @@
-# The DocPad Configuration File
-# It is simply a CoffeeScript Object which is parsed by CSON
 docpadConfig =
-
-  # Template Data
-  # =============
-  # These are variables that will be accessible via our templates
-  # To access one of these within our templates, refer to the FAQ: https://github.com/bevry/docpad/wiki/FAQ
-
   templateData:
-
-    # Specify some site properties
     site:
-      # The production url of our website
-      url: "http://website.com"
+      url: "http://johnbatte.me"
 
-      # Here are some old site urls that you would like to redirect from
       oldUrls: [
-        'www.website.com',
-        'website.herokuapp.com'
+        'jbatte47.github.io'
       ]
 
-      # The default title of our website
-      title: "Your Website"
+      title: "John Batte"
 
-      # The website description (for SEO)
       description: """
-        When your website appears in search results in say Google, the text here will be shown underneath your website's title.
+        Driven, curious, experienced, and always eager for new challenges.
+        I'm a software architect and a developer skilled in C#, Ruby, Java, JavaScript, and more.
         """
 
-      # The website keywords (for SEO) separated by commas
       keywords: """
-        place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
+        C#, csharp, Ruby, Java, JavaScript, SDLC, architecture, Batte, profile
         """
 
-      # The website author's name
-      author: "Your Name"
+      author: "John Batte"
 
-      # The website author's email
-      email: "your@email.com"
+      email: "jbatte@gmail.com"
 
-      # Your company's name
-      copyright: "© Your Company 2013"
+      profile: "http://www.linkedin.com/in/codeninja/"
 
+      copyright: "© John Batte #{new Date().getFullYear()}"
 
     # Helper Functions
     # ----------------

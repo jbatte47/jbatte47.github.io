@@ -3,21 +3,23 @@ layout: 'default'
 title: 'Home'
 ---
 
-// Main hero unit for a primary marketing message or call to action.
 .jumbotron
-  h1 Welcome to your new site!
-  p: :markdown
-    We've copied over the [Twitter Bootstrap Skeleton](https://github.com/docpad/twitter-bootstrap.docpad) for you already, which is what you're currently viewing.
-    <br>
-    Step through the guide below and we'll walk you through the process of working with your first docpad website :-)
+  h1 Hi, I'm John.
+  p
+    | If you're reading this, chances are I handed you one of my cards, or you followed 
+    a(href="#{site.profile}") my LinkedIn profile 
+    | here.
+  p
+    | Welcome, and please 
+    a(href="mailto:#{site.email}") let me know 
+    | if you have questions this site doesn't answer.
 
 // Example row of columns.
 .row
+  .col-md-4
+    img(src="/profile/gravatar_large.jpg")
+  .col-md-2
   .col-md-6
-    h2 Docpad
-    p DocPad takes that good ol' simple approach of writing files and wraps it with the best modern innovations, providing an awesome intuitive, liberating and empowering solution for HTML5 web development.</p>
-    p: a.btn.btn-default(href="https://github.com/bevry/docpad") Visit Website
-  .col-md-6
-    h2 Twitter Bootstrap
-    p Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.</p>
-    p: a.btn.btn-default(href="http://twitter.github.com/bootstrap/") Visit Website
+    p
+      | <a class="twitter-timeline" href="https://twitter.com/john_batte" data-widget-id="538411913848569857">Tweets by @john_batte</a>
+      | <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
