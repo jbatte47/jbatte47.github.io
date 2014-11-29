@@ -1,32 +1,30 @@
 docpadConfig =
   templateData:
     site:
-      url: "http://johnbatte.me"
+      author: "John Batte"
 
       basePath: "/"
-
-      oldUrls: [
-        'jbatte47.github.io'
-      ]
-
-      title: "John Batte"
 
       description: """
         Driven, curious, experienced, and always eager for new challenges.
         I'm a software architect and a developer skilled in C#, Ruby, Java, JavaScript, and more.
         """
 
+      email: "jbatte@gmail.com"
+
       keywords: """
         C#, csharp, Ruby, Java, JavaScript, SDLC, architecture, Batte, profile
         """
 
-      author: "John Batte"
-
-      email: "jbatte@gmail.com"
+      oldUrls: [
+        'jbatte47.github.io'
+      ]
 
       profile: "http://www.linkedin.com/in/codeninja/"
 
-      copyright: "© John Batte #{new Date().getFullYear()}"
+      title: "John Batte"
+
+      url: "http://johnbatte.me"
 
     # Helper Functions
     # ----------------

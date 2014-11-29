@@ -73,15 +73,16 @@ html(lang="en")
         .collapse.navbar-collapse
           ul.nav.navbar-nav.pull-right
             each doc in getCollection('pages').toJSON()
-              - clazz = (document.url === doc.url) ? 'active' : null
+              - category = doc.url.replace(/\/pages/i, '')
+              - clazz = (document.url.indexOf(category) > -1) ? 'active' : null
               li(typeof="sioc:Page", about=doc.url, class=clazz)
                 a(href=doc.url, property="dc:title")= doc.title
     .container
       section#content.content!= content
       hr
       footer
-        div= site.copyright
-        div(style="font-style:italic; font-size: 12px") This website was last updated at #{site.date}
+        div © #{site.author} #{site.date.getFullYear()}
+        .footnote This website was last updated at #{site.date}
 
     // Scripts
     != scripts.toHTML()
