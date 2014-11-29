@@ -1,17 +1,18 @@
 --- yaml
 layout: 'default'
 title: 'Home'
+scripts: ['//platform.twitter.com/widgets.js']
 ---
 
 .jumbotron
   h1 Hi, I'm John.
   p
     | If you're reading this, chances are I handed you one of my cards, or you followed 
-    a(href="#{site.profile}") my LinkedIn profile 
+    a(href=site.links.profile) my LinkedIn profile 
     | here.
   p
     | Welcome, and please 
-    a(href="mailto:#{site.email}") let me know 
+    a(href=getEmail()) let me know 
     | if you have questions this site doesn't answer.
 
 .row
@@ -19,11 +20,9 @@ title: 'Home'
     p: img(src="/profile/gravatar_large.jpg")
     p Check out the links at the top of the page, or below:
     ul
-      li: a(href="http://tribesoftware.org/") Visit tribesoftware.org
-      li: a(href="http://icodeinmysleep.com/") Visit icodeinmysleep.com
-      li: a(href="https://github.com/jbatte47/jbatte47.github.io/issues/new") Make a request
+      li: a(href=site.links.tribe) Visit tribesoftware.org
+      li: a(href=site.links.comic) Visit icodeinmysleep.com
+      li: a(href=site.links.newRequest) Make a request
   .col-md-2
   .col-md-6
-    p
-      | <a class="twitter-timeline" href="https://twitter.com/john_batte" data-widget-id="538411913848569857">Tweets by @john_batte</a>
-      | <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    p: a.twitter-timeline(href=getTwitterUrl(), data-widget-id=site.twitter.widgetId) Tweets by @#{site.twitter.id}
