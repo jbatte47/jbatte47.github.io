@@ -19,6 +19,7 @@ docpadConfig =
         tribe: "http://tribesoftware.org/"
         comic: "http://icodeinmysleep.com/"
         newRequest: "https://github.com/jbatte47/jbatte47.github.io/issues/new"
+        about: "/pages/about"
       twitter:
         id: "john_batte"
         widgetId: "538411913848569857"

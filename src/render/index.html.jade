@@ -5,24 +5,18 @@ scripts: ['//platform.twitter.com/widgets.js']
 ---
 
 .jumbotron
-  h1 Hi, I'm John.
-  p
-    | If you're reading this, chances are I handed you one of my cards, or you followed 
-    a(href=site.links.profile) my LinkedIn profile 
-    | here.
-  p
-    | Welcome, and please 
-    a(href=getEmail()) let me know 
-    | if you have questions this site doesn't answer.
+	h1
+		| Hi, I'm 
+		a(href=site.links.about) John.
+	p
+		| If you're reading this, chances are I handed you one of my cards, or you followed 
+		a(href=site.links.profile) my LinkedIn profile 
+		| here.
+	p
+		| Welcome, and please 
+		a(href=getEmail()) let me know 
+		| if you have questions this site doesn't answer.
 
 .row
-  .col-md-4
-    p: img(src="/profile/gravatar_large.jpg")
-    p Check out the links at the top of the page, or below:
-    ul
-      li: a(href=site.links.tribe) Visit tribesoftware.org
-      li: a(href=site.links.comic) Visit icodeinmysleep.com
-      li: a(href=site.links.newRequest) Make a request
-  .col-md-2
-  .col-md-6
-    p: a.twitter-timeline(href=getTwitterUrl(), data-widget-id=site.twitter.widgetId) Tweets by @#{site.twitter.id}
+	.col-md-12
+		p: a.twitter-timeline(href=getTwitterUrl(), data-widget-id=site.twitter.widgetId) Tweets by @#{site.twitter.id}
