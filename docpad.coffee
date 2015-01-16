@@ -66,4 +66,10 @@ docpadConfig =
         else
           next()
 
+  environments:
+  	development:
+  		templateData:
+  			site:
+  				url: "http://localhost:9778"
+
 module.exports = docpadConfig
