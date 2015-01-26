@@ -6,36 +6,13 @@ pageOrder: 3
 ---
 
 .carousel.slide#image-carousel(data-ride="carousel")
-	ol.carousel-indicators
-		li.active(data-target="#image-carousel" data-slide-to="0")
-		li(data-target="#image-carousel" data-slide-to="1")
-		li(data-target="#image-carousel" data-slide-to="2")
 
 	.carousel-inner
-		.item.active
-			img(src=getUrl("/img/gallery/command-not-found.png") alt="Command Not Found")
-			.carousel-caption
-				h3 error: command not found
-		.item
-			img(src=getUrl("/img/gallery/happy-coder.png") alt="Happy Coder")
-			.carousel-caption
-				h3 Happy Coder
-		.item
-			img(src=getUrl("/img/gallery/heisenbug.png") alt="Heisenbug")
-			.carousel-caption
-				h3 Heisenbug
-		.item
-			img(src=getUrl("/img/gallery/migraine.png") alt="Migraine")
-			.carousel-caption
-				h3 Migraine
-		.item
-			img(src=getUrl("/img/gallery/NSFW.png") alt="NSFW")
-			.carousel-caption
-				h3 NSFW
-		.item
-			img(src=getUrl("/img/gallery/presentation.png") alt="Presentation")
-			.carousel-caption
-				h3 Presentation
+		each image,index in getCollection('gallery').toJSON()
+			.item(class=index === 0 ? "active" : "")
+				img(src=getUrl(image.url) alt=getImageTitle(image.basename))
+				.carousel-caption
+					h3= getImageTitle(image.basename)
 
 	a.left.carousel-control(href="#image-carousel" role="button" data-slide="prev")
 		span.glyphicon.glyphicon-chevron-left
