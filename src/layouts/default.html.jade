@@ -1,19 +1,19 @@
 - var scripts = getBlock('scripts')
 - var styles = getBlock('styles')
 
-//- Prettify Syntax Highlighting
-- scripts.add(["/vendor/prettify.js"])
-- styles.add(["/vendor/prettify.css"])
+//- Prettify
+- scripts.add(["//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"])
+- styles.add(["//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css"])
 
 //- jQuery
-- scripts.add(["/vendor/jquery/dist/jquery.js"])
+- scripts.add(["//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"])
 
 //- Bootstrap
-- scripts.add(["/vendor/components-bootstrap/js/bootstrap.js"])
-- styles.add(["/vendor/components-bootstrap/css/bootstrap.css"])
+- scripts.add(["//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"])
+- styles.add(["//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"])
 
-//- Other Scripts
-- scripts.add(["/vendor/log.js","/vendor/modernizr.js"])
+//- Modernizr
+- scripts.add(["//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"])
 
 //- User
 - styles.add(["/styles/style.css"])
@@ -21,6 +21,7 @@
 
 //- Document
 - scripts.add(document.scripts || [])
+- styles.add(document.styles || [])
 
 doctype html
 html(lang="en")
