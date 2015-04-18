@@ -1,4 +1,4 @@
---- yaml
+--- 
 layout: 'default'
 title: 'Home'
 scripts: ['//platform.twitter.com/widgets.js']
@@ -8,14 +8,16 @@ scripts: ['//platform.twitter.com/widgets.js']
 	h1
 		| Hi, I'm 
 		a(href=site.links.about) John.
-	p
-		| If you're reading this, chances are I handed you one of my cards, or you followed 
-		a(href=site.links.profile) my LinkedIn profile 
-		| here.
-	p
-		| Welcome, and please 
-		a(href=getEmail()) let me know 
-		| if you have questions this site doesn't answer.
+
+	t(render="markdown")
+		| If you're reading this, chances are I handed you one of my cards,
+		| or you followed [my LinkedIn profile][profile] here.
+		| 
+		| Welcome, and please [let me know][email] if you have questions
+		| this site doesn't answer.
+		| 
+		| [email]: #{getEmail()}
+		| [profile]: #{site.links.profile}
 
 .row
 	.col-md-12
