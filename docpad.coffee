@@ -77,4 +77,9 @@ docpadConfig =
   			site:
   				url: "http://localhost:9778"
 
+  plugins:
+    ghpages:
+      deployBranch: 'master'
+      deployRemote: 'origin'
+
 module.exports = docpadConfig
