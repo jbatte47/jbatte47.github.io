@@ -9,8 +9,8 @@ $ ->
 		time = now.getTime()
 		birthTime = birth.getTime()
 		ageInYears = (time - birthTime) / years
-		
-		$("span.age").html ageInYears
+
+		$("span.age").html ageInYears.toFixed(14)
 
 		return
 	), 1000

@@ -1,24 +1,28 @@
---- 
+---
 layout: 'default'
 title: 'Home'
 scripts: ['//platform.twitter.com/widgets.js']
 ---
 
 .jumbotron
-	h1
-		| Hi, I'm 
-		a(href=site.links.about) John.
+  .row
+    .col-xs-8.col-md-6
+      h1
+        | Hi, I'm 
+        a(href=site.links.about) John.
 
-	t(render="markdown")
-		| If you're reading this, chances are I handed you one of my cards,
-		| or you followed [my LinkedIn profile][profile] here.
-		| 
-		| Welcome, and please [let me know][email] if you have questions
-		| this site doesn't answer.
-		| 
-		| [email]: #{getEmail()}
-		| [profile]: #{site.links.profile}
+      t(render="markdown")
+        | If you're reading this, chances are I handed you one of my cards,
+        | or you followed [my LinkedIn profile][profile] here.
+        | 
+        | Welcome, and please [let me know][email] if you have questions
+        | this site doesn't answer.
+        | 
+        | [email]: #{getEmail()}
+        | [profile]: #{site.links.profile}
+    .col-xs-4.col-md-6
+      img.pull-right.img-responsive(src=getUrl("/img/profile/gravatar_large.jpg"))
 
 .row
-	.col-md-12
-		p: a.twitter-timeline(href=getTwitterUrl(), data-widget-id=site.twitter.widgetId) Tweets by @#{site.twitter.id}
+  .col-md-12
+    p: a.twitter-timeline(href=getTwitterUrl(), data-widget-id=site.twitter.widgetId) Tweets by @#{site.twitter.id}
