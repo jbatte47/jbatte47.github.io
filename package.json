@@ -1,35 +1,23 @@
 {
-  "name": "twitter-bootstrap.docpad",
-  "version": "0.9.0",
-  "description": "Twitter Bootstrap skeleton for DocPad. Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions.",
-  "homepage": "https://github.com/bevry/twitter-bootstrap.docpad",
+  "name": "johnbatte.me",
+  "version": "1.0.0",
+  "description": "My Personal Website",
+  "homepage": "http://johnbatte.me",
   "keywords": [
-    "docpad-skeleton",
     "docpad",
     "website",
-    "bootstrap",
-    "twitter bootstrap"
+    "bootstrap"
   ],
-  "author": "Bevry Pty Ltd <us@bevry.me> (http://bevry.me)",
-  "maintainers": [
-    "Benjamin Lupton <b@lupton.cc> (http://balupton.com)"
-  ],
-  "contributors": [
-    "Benjamin Lupton <b@lupton.cc> (http://balupton.com)"
-  ],
-  "bugs": {
-    "url": "https://github.com/docpad/twitter-bootstrap.docpad/issues"
-  },
+  "author": "John Batte <jbatte@gmail.com> (http://johnbatte.me)",
   "repository": {
     "type": "git",
-    "url": "http://github.com/docpad/twitter-bootstrap.docpad.git"
+    "url": "https://github.com/jbatte47/jbatte47.github.io.git"
   },
   "engines": {
     "node": "0.10.x",
     "npm": "1.4.x"
   },
   "dependencies": {
-    "bower": "~1",
     "docpad": "~6.78.1",
     "docpad-plugin-cleanurls": "~2.7.0",
     "docpad-plugin-coffeescript": "~2.5.0",
@@ -46,13 +34,13 @@
     "marked": "*"
   },
   "devDependencies": {
-    "bower": "~1",
-    "docpad-plugin-livereload": "~2.6.1"
+    "docpad-plugin-livereload": "~2.6.1",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
-    "postinstall": "node node_modules/bower/bin/bower install",
     "start": "docpad run",
-    "deploy": "docpad deploy-ghpages --env static"
+    "deploy": "grunt deploy"
   }
 }

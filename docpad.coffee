@@ -47,7 +47,6 @@ docpadConfig =
     getImageTitle: (name) ->
     	(name.split '-').join ' '
 
-
   collections:
     pages: (database) ->
       database.findAllLive({pageOrder: $exists: true}, [pageOrder:1,title:1])
@@ -55,7 +54,6 @@ docpadConfig =
       database.findAllLive({relativeOutDirPath:'posts'},[date:-1])
     gallery: (database) ->
     	database.findAllLive({relativeOutDirPath: 'img\\gallery'})
-
 
   events:
     serverExtend: (opts) ->
